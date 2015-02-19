@@ -1,0 +1,47 @@
+<template name="craterCommentItem">
+  <li class="comment module comment-displayed" id="{{_id}}">
+    <div class="comment-body">
+      {{#if isDeleted}}
+        <div class="well comment-deleted">This comment has been deleted.</div>
+      {{else}}
+        <div class="comment-content">
+          <div class="comment-actions {{#if upvoted}}upvoted{{else}}not-upvoted{{/if}} {{#if downvoted}}downvoted{{else}}not-downvoted{{/if}}">
+            <a class="upvote btn btn-default" href="#">
+              <i class="icon ion-arrow-up-c"></i>
+            </a>
+            <a class="downvote btn btn-default" href="#">
+              <i class="icon ion-arrow-down-c"></i>
+            </a>
+          </div>
+
+          <div class="comment-main">
+            <div class="comment-meta">
+              <a class="comment-meta-item comment-username" href="{{profileUrl}}">{{> avatar userId=userId shape="circle"}} {{authorName}}</a>
+              <span class="comment-meta-item comment-time">{{timeAgo ago}}</span>
+              <span class="comment-meta-item points">{{upvotes}} points</span>
+              {{#if getSetting "nestedComments" true}}
+                <a href="/comments/{{_id}}" class="comment-meta-item comment-reply goto-comment">{{_ "reply"}}</a>
+              {{/if}}
+              {{#if can_edit}}
+               <a class="comment-meta-item edit-link" href="/comments/{{_id}}/edit"><i class="icon ion-ios-compose-outline"></i> {{_ "edit"}}</a>
+              {{/if}}
+            </div>
+            <div class="comment-text markdown">{{{htmlBody}}}</div>
+          </div>
+        </div>
+      {{/if}}
+
+      {{#if showChildComments}}
+        {{#if child_comments.count}}
+          <ul class="well well-sm comment-children comment-list">
+            {{#each child_comments}}
+              {{#with this}}
+                {{> UI.dynamic template=comment_item}}
+              {{/with}}
+            {{/each}}
+          </ul>
+        {{/if}}
+      {{/if}}
+    </div>
+  </li>
+</template>

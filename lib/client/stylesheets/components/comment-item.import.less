@@ -1,0 +1,101 @@
+.comment-list {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid @brand-primary;
+}
+
+.comment-content {
+  .clearfix();
+  padding: 12px 0;
+
+  .avatar {
+    .square(30px);
+  }
+}
+
+.well.comment-children {
+  clear: both;
+  margin: 0;
+  padding: 0 0 0 12px;
+  border: 0;
+  margin-left: 33px;
+  .box-shadow(none);
+}
+
+.comment > .comment-body > .comment-children > .comment > .comment-body > .comment-children > .comment > .comment-body > .comment-children > .comment > .comment-body > .comment-children > .comment > .comment-body > .comment-children > .comment > .comment-body > .comment-children > .comment > .comment-body > .comment-children > .comment > .comment-body > .comment-children {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+
+.comment-content {
+  .clearfix();
+}
+
+.comment-text > p:last-child {
+  margin-bottom: 0;
+}
+
+.comment-actions {
+  float: left;
+  width: 33px;
+  margin-right: 10px;
+
+  &.upvoted .btn.upvote, &.downvoted .btn.downvote {
+    background: @brand-primary;
+    color: #fff;
+  }
+
+  .btn.downvote {
+    margin-top: -1px;
+    border-top: 0;
+  }
+
+  .btn {
+    padding: 4px 10px;
+
+    .icon {
+      font-size: 16px;
+    }
+  }
+}
+
+.comment-main {
+  width: 90%;
+  float: left;
+}
+
+.comment-meta {
+  color: #A589C0;
+  font-weight: 100;
+  font-size: 14px;
+  margin-bottom: 6px;
+
+  a {
+    color: #A589C0;
+
+    &:hover {
+      border-bottom: 1px solid #A589C0;
+    }
+  }
+
+  div, span {
+    display: inline-block;
+  }
+}
+
+.comment-meta-item {
+  display: inline-block;
+  margin-right: 12px;
+}
+
+a.comment-username {
+  font-size: 18px;
+  font-weight: 500;
+  color: @text-color;
+
+  &:hover {
+    text-decoration: none;
+    border-bottom: 0;
+  }
+}

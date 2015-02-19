@@ -1,0 +1,32 @@
+.btn {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+  .icon {
+    font-size: 14px;
+  }
+}
+
+.btn-default:hover {
+  background: @brand-primary;
+  color: #fff;
+}
+
+.btn-primary {
+  #gradient > .vertical(@start-color: @brand-primary; @end-color: @brand-secondary);
+
+  &:hover {
+    #gradient > .vertical(@start-color: @brand-secondary; @end-color: @brand-primary);
+  }
+}
+
+.btn-link {
+  padding-left: 0;
+  padding-right: 0;
+
+  &:hover {
+    border-bottom: 0;
+    text-decoration: none;
+  }
+}

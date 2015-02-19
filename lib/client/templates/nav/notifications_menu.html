@@ -1,0 +1,22 @@
+<template name="craterNotificationsMenu">
+  {{#if isLoggedIn}}
+    <div class="dropdown notifications-dropdown">
+      <button class="btn btn-default btn-lg dropdown-toggle" data-toggle="dropdown">
+        <i class="icon ion-ios-bolt-outline"></i>
+        {{#if notificationCount}}
+          <span class="badge badge-primary">{{notificationCount}}</span>
+        {{/if}}
+      </button>
+      <ul class="dropdown-menu dropdown-menu-right">
+        {{#if hasNotifications}}
+          <li><a href="#" class="button mark-as-read btn btn-primary">{{_ "mark_as_read"}}</a></li>
+          {{#each notifications}}
+            {{> UI.dynamic template=notificationItem}}
+          {{/each}}
+        {{else}}
+          <li>{{_ "no_notifications"}}</li>
+        {{/if}}
+      </ul>
+    </div>
+  {{/if}}
+</template>

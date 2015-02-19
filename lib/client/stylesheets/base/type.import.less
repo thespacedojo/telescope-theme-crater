@@ -1,0 +1,24 @@
+::-moz-selection { background: @brand-primary; color: #fff; text-shadow: none; }
+::selection { background: @brand-primary; color: #fff; text-shadow: none; }
+
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+blockquote {
+  border: 0;
+  font-size: 14px;
+  font-style: italic;
+  position: relative;
+  margin-bottom: 0;
+}
+
+blockquote:before {
+  content: "“";
+  font-size: 40px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}

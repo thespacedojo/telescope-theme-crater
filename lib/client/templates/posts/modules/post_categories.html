@@ -1,0 +1,8 @@
+<template name="craterPostCategories">
+  <div class="post-meta-item post-meta-categories">
+    <i class="icon ion-ios-pricetag-outline"></i>
+    {{#each categories}}
+      <a href="{{categoryLink}}" class="post-category category-{{slug}}">{{name}}</a>
+    {{/each}}
+  </div>
+</template>

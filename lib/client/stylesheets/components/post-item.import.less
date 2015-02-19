@@ -1,0 +1,124 @@
+.post {
+  .clearfix();
+  margin-bottom: 24px;
+  position: relative;
+
+  .post-module {
+    vertical-align: middle;
+  }
+  .post-upvote {
+    float: left;
+    width: 50px;
+    margin-right: 16px;
+  }
+  .post-content {
+    width: 70%;
+    float: left;
+  }
+  .post-avatars {
+    position: absolute;
+    right: 70px;
+    top: 10px;
+  }
+  .post-discuss {
+    position: absolute;
+    right: 0;
+  }
+  .post-actions {
+    display: none;
+  }
+}
+
+.post-rank {
+  margin-top: -4px;
+}
+
+.post-upvote {
+  .btn {
+    width: 46px;
+    height: 57px;
+    padding: 0;
+    text-align: center;
+    font-size: 12px;
+    color: @text-color;
+
+    .icon {
+      font-size: 24px;
+      line-height: 36px;
+      margin-top: 6px;
+    }
+
+    &:hover {
+      #gradient > .vertical(@start-color: @brand-primary; @end-color: @brand-secondary);
+      color: #fff;
+    }
+
+    &.voted {
+      color: #fff;
+
+      .icon {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+h3.post-heading {
+  font-weight: 500;
+  color: @text-color;
+  font-size: 22px;
+  margin: 0 0 6px 0;
+
+  a.post-title {
+    color: @text-color;
+
+    &:hover {
+      color: @brand-primary;
+    }
+
+    &:visited {
+      color: lighten(@brand-primary, 10%);
+    }
+  }
+}
+
+.post-meta {
+  color: #A589C0;
+  font-weight: 100;
+  font-size: 14px;
+
+  a {
+    color: #A589C0;
+
+    &:hover {
+      border-bottom: 1px solid #A589C0;
+    }
+  }
+
+  div, span {
+    display: inline-block;
+  }
+}
+
+.post-meta-item {
+  display: inline-block;
+  margin-right: 12px;
+}
+
+
+.posts-wrapper .post-share {
+  display: none;
+}
+
+.discuss-link {
+  line-height: 57px;
+  color: @brand-primary;
+
+  i.icon {
+    font-size: 36px;
+    vertical-align: middle;
+  }
+  .count {
+    font-size: 18px;
+  }
+}

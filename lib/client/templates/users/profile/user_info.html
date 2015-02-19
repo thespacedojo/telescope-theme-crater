@@ -1,0 +1,37 @@
+<template name="craterUserInfo">
+  <div class="jumbotron user-profile-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-1">
+          {{> avatar user=this size="large" shape="circle"}}
+        </div>
+        <div class="col-md-10">
+          <h2>{{profile.name}}</h2>
+
+          {{#if profile.bio}}
+            <p>{{profile.bio}}</p>
+          {{/if}}
+
+          <ul class="list-inline user-profile-header-links">
+            {{#if getTwitterName}}
+              <li><a class="btn btn-link" href="http://twitter.com/{{getTwitterName}}" target="_blank"><i class="icon ion-social-twitter"></i> {{getTwitterName}}</a></li>
+            {{/if}}
+            {{#if getGitHubName}}
+              <li><a class="btn btn-link" href="http://github.com/{{getGitHubName}}" target="_blank"><i class="icon ion-social-github"></i> {{getGitHubName}}</a></li>
+            {{/if}}
+            {{#if profile.site}}
+              <li><a class="btn btn-link" href="{{profile.site}}" target="_blank"><i class="icon ion-ios-world-outline"></i> {{profile.site}}</a></li>
+            {{/if}}
+          </ul>
+
+          {{#if canEditProfile}}
+            <ul class="list-inline">
+              <li><a class="btn btn-primary" href="{{pathFor route='user_edit' slug=slug}}">{{_ "edit_profile"}}</a></li>
+              <li><a class="btn btn-primary" href="{{pathFor 'signOut'}}">Sign Out</a></li>
+            </ul>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

@@ -1,0 +1,41 @@
+nav#crater-tabs {
+  width: 100px;
+  padding: 12px;
+  #gradient > .vertical(@start-color: @brand-primary; @end-color: @brand-secondary);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+.crater-tabs-logo {
+  display: block;
+  .square(68px);
+  margin: 32px auto;
+
+  &:hover {
+    .opacity(0.8);
+  }
+}
+
+.crater-tab a {
+  display: block;
+  text-align: center;
+  color: #fff;
+  .opacity(0.8);
+  font-size: 14px;
+  font-weight: 100;
+  margin-bottom: 24px;
+
+  i {
+    font-size: 28px;
+    line-height: 28px;
+    display: block;
+  }
+}
+
+.crater-tab .active a, .crater-tab a:hover {
+  .opacity(1);
+}

@@ -1,0 +1,14 @@
+<template name="craterPostsLoadMore">
+  {{#if hasMorePosts}}
+    <a class="btn btn-default btn-lg more-button grid-module" href="{{loadMoreUrl}}">
+      <i class="icon ion-ios-refresh-empty"></i>
+      <span>{{_ "Load more"}}</span>
+    </a>
+  {{else}}
+    {{#unless ready}}
+      <div class="grid loading-module">
+        <i class="icon ion-load-c"></i>
+      </div>
+    {{/unless}}
+  {{/if}}
+</template>

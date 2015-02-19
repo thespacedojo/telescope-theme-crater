@@ -1,0 +1,12 @@
+<template name="craterSearch">
+  {{#if canSearch}}
+    <div class="dropdown search-dropdown">
+      <button class="btn btn-default btn-lg dropdown-toggle" data-toggle="dropdown">
+        <i class="icon ion-ios-search"></i>
+      </button>
+      <div class="dropdown-menu dropdown-menu-right">
+        <input id="search" type="search" class="search-field" placeholder="{{_ 'search'}}" value="{{searchQuery}}">
+      </div>
+    </div>
+  {{/if}}
+</template>

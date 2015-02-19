@@ -1,0 +1,17 @@
+<template name="craterPostInfo">
+
+  <div class="post-meta-item post-meta-time">
+    <a class="post-time" href="/posts/{{_id}}"><i class="icon ion-ios-clock-outline"></i> {{timeAgo ago}}</a>
+  </div>
+
+  <div class="post-meta-item post-meta-author">
+    <a class="post-author" href="{{profileUrl userId}}"><i class="icon ion-ios-person"></i> {{author}}</a>
+  </div>
+
+  {{#if can_edit}}
+    <div class="post-meta-item post-meta-edit">
+      <a href="/posts/{{_id}}/edit" class="edit-link goto-edit"><i class="icon ion-ios-compose-outline"></i> {{_ "edit"}}</a>
+    </div>
+  {{/if}}
+
+</template>

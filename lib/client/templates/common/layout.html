@@ -1,0 +1,31 @@
+<template name="craterLayout">
+
+  {{> UI.dynamic template=css}}
+
+  <div class="outer-wrapper {{currentPage}}">
+    <div class="inner-wrapper template-{{pageName}}">
+
+      <div class="content-wrapper">
+        {{> UI.dynamic template=nav}}
+
+        <div class="content-inner-wrapper">
+          {{> UI.dynamic template=error}}
+
+          {{#each heroModules}}
+            {{> UI.dynamic template=getTemplate}}
+          {{/each}}
+
+          {{> yield}}
+        </div>
+
+        {{> UI.dynamic template=footer}}
+      </div>
+
+      {{> craterTabs}}
+
+    </div>
+
+    {{{extraCode}}}
+  </div>
+
+</template>

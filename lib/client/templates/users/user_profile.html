@@ -1,0 +1,19 @@
+<template name="craterUserProfile">
+  {{#with user}}
+    {{> craterUserInfo}}
+
+    <ul class="nav nav-pills user-profile-tabs">
+      <li class="active"><a href="#user-profile-posts">Posts</a></li>
+      <li><a href="#user-profile-comments">Comments</a></li>
+      <li><a href="#user-profile-upvotes">Up Votes</a></li>
+      <li><a href="#user-profile-downvotes">Down Votes</a></li>
+    </ul>
+
+    <div class="tab-content">
+      {{> craterUserPosts}}
+      {{> craterUserComments}}
+      {{> craterUserUpvotedPosts}}
+      {{> craterUserDownvotedPosts}}
+    </div>
+  {{/with}}
+</template>

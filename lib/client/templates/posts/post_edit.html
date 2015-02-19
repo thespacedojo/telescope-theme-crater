@@ -1,0 +1,100 @@
+<template name="craterPostEdit">
+
+  <div class="row">
+    <div class="col-sm-8">
+
+      {{#with post}}
+        <form class="form-horizontal">
+
+          <div class="form-group">
+            <label class="col-sm-2 control-label">{{_ "url"}}</label>
+            <div class="col-sm-10"><input id="url" type="text" value="{{url}}" /></div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-2 control-label">{{_ "title"}}</label>
+            <div class="col-sm-10"><input id="title" type="text" value="{{title}}" /><a href="#" class="get-title-link inline-link btn btn-link">{{_ "suggest_title"}}?</a></div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-2 control-label">{{_ "body"}}</label>
+            <div class="col-sm-10">
+              <div id="editor">
+                <textarea id="body" class="input-xlarge">{{body}}</textarea>
+              </div>
+            </div>
+          </div>
+
+          {{#if categoriesEnabled}}
+          <div class="form-group">
+            <label class="col-sm-2 control-label">{{_ "category"}}</label>
+            <div class="col-sm-10">
+              {{#each categories}}
+              <label class="checkbox-inline">
+                <input id="category_{{_id}}" type="checkbox" value="{{_id}}" name="category" /> {{name}}
+              </label>
+              {{/each}}
+            </div>
+          </div>
+          {{/if}}
+
+          {{#if isAdmin}}
+            <div class="well">
+              <div class="form-group">
+                <label class="col-sm-2 control-label">{{_ "sticky_"}}</label>
+                <div class="col-sm-10">
+                  <input type="checkbox" name="sticky" id="sticky" {{isSticky}} />
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label">{{_ "user"}}</label>
+                <div class="col-sm-10">
+                  <select id="postUser">
+                    {{#each users}}
+                    <option {{isSelected this}} value="{{_id}}">{{userName}}</option>
+                    {{/each}}
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label">{{_ "status_"}}</label>
+                <div class="col-sm-10">
+                  <label class="checkbox-inline">
+                    <input id="status_pending" type="radio" value="1" name="status" {{hasStatusPending}} /> {{_ "pending"}}
+                  </label>
+                  <label class="checkbox-inline">
+                    <input id="status_approved" type="radio" value="2" name="status" {{hasStatusApproved}} /> {{_ "approved"}}
+                  </label>
+                  <label class="checkbox-inline">
+                    <input id="status_rejected" type="radio" value="3" name="status" {{hasStatusRejected}} /> {{_ "rejected"}}
+                  </label>
+                </div>
+              </div>
+              <div id="postedAt" class={{showPostedAt}}>
+                <div class="form-group">
+                  <label class="col-sm-2 control-label post-form-date">{{_ "posted_date"}}</label>
+                  <div class="col-sm-10"><input id="postedAtDate" type="text" value="{{postedAtDate}}" /></div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-2 control-label post-form-time">{{_ "posted_time"}}</label>
+                  <div class="col-sm-10"><input id="postedAtTime" type="text" value="{{postedAtTime}}" /></div>
+                </div>
+                <p class="help-block">{{_ "leave_blank_to_post_at_current_time"}}</p>
+              </div>
+            </div>
+          {{/if}}
+
+          <div class="form-group">
+            <div class="col-sm-10 col-sm-push-2">
+              <button type="submit" class="btn btn-default btn-lg btn-block">{{_ "submit"}}</button>
+              <a class="delete-link btn btn-link btn-lg btn-block" href="/posts/deleted">{{_ "delete_post"}}?</a>
+            </div>
+          </div>
+
+        </form>
+      {{/with}}
+
+    </div>
+  </div>
+
+</template>
