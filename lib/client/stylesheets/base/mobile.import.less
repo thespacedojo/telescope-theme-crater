@@ -50,7 +50,6 @@
   }
 
   header#main-header {
-
     .row {
       margin: 0;
     }
@@ -109,6 +108,32 @@
         width: 40px;
       }
     }
+
+    .btn.submit {
+      background: transparent;
+      color: #fff;
+      margin: 0;
+      height: @mobile-bar-height;
+      line-height: @mobile-bar-height;
+      padding: 0;
+      width: 40px;
+
+      .submit-label {
+        display: none;
+      }
+
+      i.icon {
+        font-size: 24px;
+      }
+    }
+  }
+
+  form {
+    padding: 14px;
+  }
+
+  button[type="submit"] {
+    width: 100%;
   }
 
   nav#crater-tabs {
@@ -193,5 +218,18 @@
 
   .comment-main {
     width: 80%;
+  }
+
+  .user-profile-header {
+    text-align: center;
+  }
+
+  .user-profile-tabs, .user-profile-tab {
+    width: 100%;
+
+    &.nav-pills > li {
+      display: block;
+      float: none;
+    }
   }
 }
