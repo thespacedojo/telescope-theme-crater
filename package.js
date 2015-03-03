@@ -164,6 +164,7 @@ Package.onUse(function (api) {
     'lib/client/templates/posts/modules/post_categories.html',
     'lib/client/templates/posts/modules/post_discuss.html',
     'lib/client/templates/posts/modules/post_domain.html',
+    'lib/client/templates/posts/modules/post_domain.js',
     'lib/client/templates/posts/modules/post_info.html',
     'lib/client/templates/posts/modules/post_upvote.html',
     'lib/client/templates/posts/post_body.html',
