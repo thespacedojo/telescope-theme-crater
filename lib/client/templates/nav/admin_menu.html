@@ -1,0 +1,12 @@
+<template name="craterAdminMenu">
+  {{#if isAdmin}}
+    <div class="dropdown header-submodule admin-menu">
+      <button class="btn btn-default btn-lg dropdown-toggle" data-toggle="dropdown"><i class="icon ion-ios-gear-outline"></i></button>
+      <ul class="dropdown-menu dropdown-menu-right">
+        {{#each menu}}
+          {{> UI.dynamic template=menuItem data=this}}
+        {{/each}}
+      </ul>
+    </div>
+  {{/if}}
+</template>
