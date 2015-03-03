@@ -107,6 +107,7 @@ Package.onUse(function (api) {
     'lib/client/stylesheets/base/variables.import.less',
     'lib/client/stylesheets/base/mixins.import.less',
     'lib/client/stylesheets/base/type.import.less',
+    'lib/client/stylesheets/base/mobile.import.less',
     'lib/client/stylesheets/crater.less'
   ], ['client']);
 

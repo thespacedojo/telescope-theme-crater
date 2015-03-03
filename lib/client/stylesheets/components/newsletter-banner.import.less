@@ -2,6 +2,7 @@
   border: 1px solid #E4DBEB;
   padding: 18px !important;
   margin-bottom: 24px;
+  position: relative;
 
   h4.newsletter-tagline {
     font-weight: 400;
@@ -39,6 +40,9 @@
 
 .newsletter-dismiss {
   &:extend(.close);
+  position: absolute;
+  top: 18px;
+  right: 18px;
   .opacity(.65);
   text-shadow: none;
   font-weight: normal;
