@@ -185,6 +185,7 @@ Package.onUse(function (api) {
   api.export([
     'viewNav',
     'postHeading',
+    'postModules',
     'postMeta',
     'heroModules'
   ]);
