@@ -8,6 +8,10 @@
     <a class="post-author" href="{{profileUrl userId}}"><i class="icon ion-ios-person"></i> {{userName userId}}</a>
   </div>
 
+  <div class="post-meta-item post-meta-comments">
+    <a class="post-author" href="/posts/{{_id}}"><i class="icon ion-ios-chatbubble"></i> {{commentCount}} Comments</a>
+  </div>
+
   {{#if canEdit this}}
     <div class="post-meta-item post-meta-edit">
       <a href="{{pathFor route='post_edit' _id=_id}}" class="edit-link goto-edit"><i class="icon ion-ios-compose-outline"></i> {{_ "edit"}}</a>
