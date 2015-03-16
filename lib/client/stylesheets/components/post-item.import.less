@@ -30,7 +30,7 @@
 }
 
 .post-rank {
-  margin-top: -4px;
+  margin-top: -6px;
 }
 
 .post-upvote {
@@ -41,11 +41,15 @@
     text-align: center;
     font-size: 12px;
     color: @text-color;
+    font-family: @font-family-sans-serif;
 
     .icon {
       font-size: 24px;
+      display: block;
+      width: 14px;
+      height: 36px;
       line-height: 36px;
-      margin-top: 6px;
+      margin: 2px auto 0 auto;
     }
 
     &:hover {
@@ -72,12 +76,8 @@ h3.post-heading {
   a.post-title {
     color: @text-color;
 
-    &:hover {
+    &:hover, &:visited {
       color: @brand-primary;
-    }
-
-    &:visited {
-      color: lighten(@text-color, 33%);
     }
   }
 }

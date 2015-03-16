@@ -1,0 +1,15 @@
+<template name="craterPostSubscribe">
+  {{#if canSubscribe}}
+    <div class="post-subscribe module grid-block">
+      {{#if subscribed}}
+        <a class="unsubscribe-link btn btn-primary btn-lg" href="#">
+          <span><i class="icon ion-ios-close-outline"></i> Unsubscribe</span>
+        </a>
+      {{else}}
+        <a class="subscribe-link btn btn-default btn-lg" href="#">
+          <span><i class="icon ion-social-rss-outline"></i> Subscribe to Comments</span>
+        </a>
+      {{/if}}
+    </div>
+  {{/if}}
+</template>

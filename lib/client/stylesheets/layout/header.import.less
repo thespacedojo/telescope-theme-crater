@@ -36,9 +36,12 @@ header#main-header {
   .dropdown {
     display: inline-block;
 
+    &.dropdown-menu-right {
+      text-align: right;
+    }
+
     .dropdown-menu {
       padding: 12px;
-      min-width: 300px;
     }
 
     .btn {
@@ -78,6 +81,10 @@ header#main-header {
     }
 
     &.search-dropdown {
+      .dropdown-menu {
+        min-width: 300px;
+      }
+
       input {
         border-radius: 24px;
       }
