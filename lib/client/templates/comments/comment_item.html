@@ -18,7 +18,7 @@
             <div class="comment-meta">
               <a class="comment-meta-item comment-username" href="{{profileUrl}}">{{> avatar userId=userId shape="circle"}} {{authorName}}</a>
               <span class="comment-meta-item comment-time">{{timeAgo ago}}</span>
-              <span class="comment-meta-item points">{{upvotes}} points</span>
+              <span class="comment-meta-item points">{{baseScore}} points</span>
               {{#if getSetting "nestedComments" true}}
                 <a href="/comments/{{_id}}" class="comment-meta-item comment-reply goto-comment">{{_ "reply"}}</a>
               {{/if}}
