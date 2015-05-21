@@ -16,7 +16,7 @@
 
           <div class="comment-main">
             <div class="comment-meta">
-              <a class="comment-meta-item comment-username" href="{{profileUrl}}">{{> avatar userId=userId shape="circle"}} {{authorName}}</a>
+              <a class="comment-meta-item comment-username" href="{{getProfileUrl this}}">{{> avatar userId=userId shape="circle"}} {{authorName}}</a>
               <span class="comment-meta-item comment-time">{{timeAgo ago}}</span>
               <span class="comment-meta-item points">{{baseScore}} points</span>
               {{#if isAdmin}}
