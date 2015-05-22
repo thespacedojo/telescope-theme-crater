@@ -160,6 +160,7 @@ Package.onUse(function (api) {
     'lib/client/templates/nav/categories_menu.html',
     'lib/client/templates/nav/notifications_menu.html',
     'lib/client/templates/nav/user_menu.html',
+    'lib/client/templates/nav/user_menu.js',
     'lib/client/templates/nav/search.html',
     'lib/client/templates/nav/submit_button.html',
     'lib/client/templates/nav/tabs.html',

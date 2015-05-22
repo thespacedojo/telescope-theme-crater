@@ -1,7 +1,5 @@
 <template name="craterFooter">
-  {{#each footerModules}}
-    {{> UI.dynamic template=getTemplate}}
-  {{/each}}
+  {{> modules "footer"}}
 
   {{#if footerCode}}
     <div class="{{footerClass}}">

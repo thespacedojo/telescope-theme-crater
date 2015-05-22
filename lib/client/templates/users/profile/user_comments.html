@@ -1,28 +1,5 @@
 <template name="craterUserComments">
   <div class="user-profile-tab tab-pane" id="user-profile-comments">
-    {{#if comments.count}}
-      <table class="table">
-        <tbody>
-          {{#each comments}}
-            <tr>
-              <td><a href="{{pathFor route='post_page' _id=postId}}/">{{postTitle}}</a></td>
-              <td>{{{htmlBody}}}</td>
-              <td>{{formatDate createdAt "MM/DD/YY"}}</td>
-            </tr>
-          {{/each}}
-        </tbody>
-      </table>
-    {{else}}
-      <div class="well">
-        <p>
-          This user hasn't posted any comments yet.
-        </p>
-      </div>
-    {{/if}}
-    {{#if hasMoreComments}}
-      <p class="text-center">
-        <a class="btn btn-default comments-more more-button grid-module" href="#"><span>{{_ "load_more"}}</span></a>
-      </p>
-    {{/if}}
+    {{> commentsListController arguments}}
   </div>
 </template>

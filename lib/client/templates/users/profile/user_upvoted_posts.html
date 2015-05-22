@@ -1,27 +1,5 @@
 <template name="craterUserUpvotedPosts">
   <div class="user-profile-tab tab-pane" id="user-profile-upvotes">
-    {{#if posts.count}}
-      <table class="table">
-        <tbody>
-          {{#each posts}}
-            <tr>
-              <td><a href="{{pathFor route='post_page' _id=_id}}">{{title}}</a></td>
-              <td>{{formatDate votedAt "MM/DD/YY"}}</td>
-            </tr>
-          {{/each}}
-        </tbody>
-      </table>
-    {{else}}
-      <div class="well">
-        <p>
-          This user hasn't upvoted any posts yet.
-        </p>
-      </div>
-    {{/if}}
-    {{#if hasMorePosts}}
-      <p class="text-center">
-        <a class="btn btn-default upvotedposts-more more-button grid-module" href="#"><span>{{_ "load_more"}}</span></a>
-      </p>
-    {{/if}}
+    {{> posts_list_controller arguments}}
   </div>
 </template>

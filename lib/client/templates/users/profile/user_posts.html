@@ -1,34 +1,5 @@
 <template name="craterUserPosts">
   <div class="user-profile-tab tab-pane active" id="user-profile-posts">
-    {{#if posts.count}}
-      <table class="table">
-        <tbody>
-          {{#each posts}}
-            <tr>
-              <td><a href="{{pathFor route='post_page' _id=_id}}">{{title}}</a></td>
-              <td>{{formatDate createdAt "MM/DD/YY"}}</td>
-            </tr>
-          {{/each}}
-        </tbody>
-      </table>
-    {{else}}
-      <div class="well">
-        <p>
-          This user doesn't have any posts yet.
-        </p>
-      </div>
-    {{/if}}
-
-    {{#if isReady}}
-      {{#if hasMorePosts}}
-        <p class="text-center">
-          <a class="btn btn-default posts-more more-button grid-module" href="#"><span>{{_ "load_more"}}</span></a>
-        </p>
-      {{/if}}
-    {{else}}
-      <p class="text-center">
-        {{>spinner}}
-      </p>
-    {{/if}}
+    {{> posts_list_controller arguments}}
   </div>
 </template>
