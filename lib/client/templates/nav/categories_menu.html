@@ -2,16 +2,7 @@
   {{#if hasCategories}}
     <div class="dropdown categories-menu header-submodule">
       <button class="btn btn-default btn-lg dropdown-toggle" data-toggle="dropdown"><i class="icon ion-ios-list-outline"></i></button>
-      <ul class="dropdown-menu dropdown-menu-right">
-        {{#each categories}}
-          <li>
-            <a class="dropdown-sub-level" href="{{categoryLink}}">
-              <span class="category-name menu-label">{{name}}</span>
-              {{#if description}}<span class="category-description menu-description">{{description}}</span>{{/if}}
-            </a>
-          </li>
-        {{/each}}
-      </ul>
+      {{> menuComponent menuName="categories" menuItems=menuItems menuClass="header-submodule dropdown-menu dropdown-menu-right" menuMode="list"}}
     </div>
   {{/if}}
 </template>

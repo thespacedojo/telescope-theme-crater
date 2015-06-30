@@ -1,10 +1,13 @@
-Package.describe({summary: "Crater.io Theme"});
+Package.describe({
+  name: "telescope-theme-crater",
+  summary: "Crater.io Theme"
+});
 
 Package.onUse(function (api) {
 
-  api.use(['telescope-lib', 'telescope-base', 'useraccounts:bootstrap'], ['client', 'server']);
+  api.use(['telescope:core@0.20.4']);
 
-  api.use(['templating', 'less'], 'client');
+  api.use(['less'], 'client');
 
   api.addFiles([
     'lib/crater.js',
@@ -157,6 +160,7 @@ Package.onUse(function (api) {
     'lib/client/templates/nav/categories_menu.html',
     'lib/client/templates/nav/notifications_menu.html',
     'lib/client/templates/nav/user_menu.html',
+    'lib/client/templates/nav/user_menu.js',
     'lib/client/templates/nav/search.html',
     'lib/client/templates/nav/submit_button.html',
     'lib/client/templates/nav/tabs.html',
@@ -181,7 +185,8 @@ Package.onUse(function (api) {
     'lib/client/templates/users/profile/user_downvoted_posts.html',
     'lib/client/templates/users/profile/user_info.html',
     'lib/client/templates/users/profile/user_posts.html',
-    'lib/client/templates/users/profile/user_upvoted_posts.html'
+    'lib/client/templates/users/profile/user_upvoted_posts.html',
+    'lib/client/templates.js'
   ], ['client']);
 
   // Custom Configuration
