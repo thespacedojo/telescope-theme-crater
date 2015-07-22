@@ -5,7 +5,8 @@ Package.describe({
 
 Package.onUse(function (api) {
 
-  api.use(['telescope:core@0.20.4']);
+  //api.use(['telescope:core@0.20.4']); Previously used version
+  api.use(['telescope:core@0.21.1']);
 
   api.use(['less'], 'client');
 
@@ -128,7 +129,8 @@ Package.onUse(function (api) {
     'lib/client/stylesheets/components/post-list.import.less',
     'lib/client/stylesheets/components/telescope.import.less',
     'lib/client/stylesheets/components/update-banner.import.less',
-    'lib/client/stylesheets/components/user-profile.import.less'
+    'lib/client/stylesheets/components/user-profile.import.less',
+    'lib/client/stylesheets/components/accounts-ui.import.less'
   ], ['client']);
 
   // Custom CSS - Layout
@@ -173,7 +175,8 @@ Package.onUse(function (api) {
     'lib/client/templates/posts/modules/post_domain.html',
     'lib/client/templates/posts/modules/post_domain.js',
     'lib/client/templates/posts/modules/post_info.html',
-    'lib/client/templates/posts/modules/post_upvote.html',
+    'lib/client/templates/posts/modules/post_vote.html',
+    'lib/client/templates/posts/modules/post_vote.js',
     'lib/client/templates/posts/post_body.html',
     'lib/client/templates/posts/post_edit.html',
     'lib/client/templates/posts/posts_load_more.html',
