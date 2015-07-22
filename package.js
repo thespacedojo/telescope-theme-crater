@@ -129,7 +129,8 @@ Package.onUse(function (api) {
     'lib/client/stylesheets/components/post-list.import.less',
     'lib/client/stylesheets/components/telescope.import.less',
     'lib/client/stylesheets/components/update-banner.import.less',
-    'lib/client/stylesheets/components/user-profile.import.less'
+    'lib/client/stylesheets/components/user-profile.import.less',
+    'lib/client/stylesheets/components/accounts-ui.import.less'
   ], ['client']);
 
   // Custom CSS - Layout
