@@ -178,7 +178,6 @@ Package.onUse(function (api) {
     'lib/client/templates/posts/modules/post_vote.html',
     'lib/client/templates/posts/modules/post_vote.js',
     'lib/client/templates/posts/post_body.html',
-    'lib/client/templates/posts/post_edit.html',
     'lib/client/templates/posts/posts_load_more.html',
     'lib/client/templates/posts/post_subscribe.html',
     'lib/client/templates/posts/post_subscribe.js',
