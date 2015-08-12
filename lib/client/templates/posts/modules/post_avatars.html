@@ -1,5 +1,7 @@
 <template name="craterPostAvatars">
-  <a href="{{getProfileUrl userId}}" title="{{author}}" data-toggle="tooltip" class="author-avatar">
-    {{> avatar userId=userId shape="circle"}}
-  </a>
+  <div class="post-avatars post-module">
+    <a href="{{getProfileUrl userId}}" title="{{author}}" data-toggle="tooltip" class="author-avatar">
+      {{> avatar userId=userId shape="circle" size="small"}}
+    </a>
+  </div>
 </template>

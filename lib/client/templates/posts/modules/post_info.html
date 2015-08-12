@@ -1,7 +1,7 @@
 <template name="craterPostInfo">
 
   <div class="post-meta-item post-meta-time">
-    <a class="post-time" href="/posts/{{_id}}"><i class="icon ion-ios-clock-outline"></i> {{timeAgo postedAt}}</a>
+    <a class="post-time" href="{{this.getPageUrl}}"><i class="icon ion-ios-clock-outline"></i> {{timeAgo postedAt}}</a>
   </div>
 
   <div class="post-meta-item post-meta-author">
@@ -9,7 +9,7 @@
   </div>
 
   <div class="post-meta-item post-meta-comments">
-    <a class="post-author" href="/posts/{{_id}}"><i class="icon ion-ios-chatbubble"></i> {{commentCount}} Comments</a>
+    <a class="post-author" href="{{this.getPageUrl}}"><i class="icon ion-ios-chatbubble"></i> {{commentCount}} Comments</a>
   </div>
 
   {{#if canEdit this}}
