@@ -8,13 +8,14 @@
   <div class="outer-wrapper {{currentPage}}">
     <div class="inner-wrapper template-{{pageName}}">
 
-      <div class="content-wrapper">
+      <div class="crater-content-wrapper">
         {{> header}}
 
         <div class="content-inner-wrapper">
           {{> messages}}
-
-          {{> modules "hero"}}
+          <div class="newsletter-wrapper">
+            {{> modules "hero"}}
+          </div>
 
           {{> yield}}
         </div>
