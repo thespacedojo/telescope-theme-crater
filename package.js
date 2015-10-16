@@ -6,7 +6,7 @@ Package.describe({
 Package.onUse(function (api) {
 
   //api.use(['telescope:core@0.20.4']); Previously used version
-  api.use(['telescope:core@0.22.2']);
+  api.use(['telescope:core@0.24.0']);
 
   api.use(['less'], 'client');
 
