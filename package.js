@@ -6,7 +6,7 @@ Package.describe({
 Package.onUse(function (api) {
 
   //api.use(['telescope:core@0.20.4']); Previously used version
-  api.use(['telescope:core@0.24.0']);
+  api.use(['telescope:core@0.25.3']);
 
   api.use(['less'], 'client');
 
@@ -91,7 +91,7 @@ Package.onUse(function (api) {
   ], ['client']);
 
   // Ionicons - Fonts
-  api.addFiles([
+  api.addAssets([
     'lib/public/fonts/ionicons.eot',
     'lib/public/fonts/ionicons.svg',
     'lib/public/fonts/ionicons.ttf',
@@ -142,7 +142,7 @@ Package.onUse(function (api) {
   ], ['client']);
 
   // Images
-  api.addFiles([
+  api.addAssets([
     'lib/public/images/crater.png'
   ], ['client']);
 
@@ -156,8 +156,8 @@ Package.onUse(function (api) {
     'lib/client/templates/comments/comment_item.html',
     'lib/client/templates/common/footer.html',
     'lib/client/templates/common/layout.html',
-    'lib/client/templates/nav/nav.html',
-    'lib/client/templates/nav/nav.js',
+    'lib/client/templates/nav/header.html',
+    'lib/client/templates/nav/header.js',
     'lib/client/templates/nav/admin_menu.html',
     'lib/client/templates/nav/categories_menu.html',
     'lib/client/templates/nav/notifications_menu.html',
