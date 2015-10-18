@@ -1,4 +1,4 @@
-<template name="craterPostInfo">
+<template name="crater_post_info">
 
   <div class="post-meta-item post-meta-time">
     <a class="post-time" href="{{this.getPageUrl}}"><i class="icon ion-ios-clock-outline"></i> {{timeAgo postedAt}}</a>
@@ -14,7 +14,7 @@
 
   {{#if canEdit this}}
     <div class="post-meta-item post-meta-edit">
-      <a href="{{pathFor route='post_edit' _id=_id}}" class="edit-link goto-edit"><i class="icon ion-ios-compose-outline"></i> {{_ "edit"}}</a>
+      <a href="{{pathFor route='postEdit' _id=_id}}" class="edit-link goto-edit"><i class="icon ion-ios-compose-outline"></i> {{_ "edit"}}</a>
     </div>
   {{/if}}
 

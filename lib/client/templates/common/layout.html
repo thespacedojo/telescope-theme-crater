@@ -3,31 +3,41 @@
 <link href='//fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 </head>
 
-<template name="craterLayout">
+<template name="crater_layout">
+  {{#if appIsReady}}
+    {{> css}}
+    <div class="outer-wrapper {{currentPage}} {{navLayout}}">
+      <div class="inner-wrapper template-{{pageName}}">
 
-  <div class="outer-wrapper {{currentPage}}">
-    <div class="inner-wrapper template-{{pageName}}">
+        <div class="crater-content-wrapper">
 
-      <div class="crater-content-wrapper">
-        {{> header}}
+          {{> header}}
+        
+          {{> modules zone="hero"}}
 
-        <div class="content-inner-wrapper">
-          {{> messages}}
-          <div class="newsletter-wrapper">
-            {{> modules "hero"}}
+          <div class="content-wrapper">
+
+            {{#if notAllowed}}
+              {{> Template.dynamic template=notAllowed.template data=notAllowed.data}}
+            {{else}}
+              {{> Template.dynamic template=adminMenu}}
+              {{> modules zone="contentTop"}}
+              {{> Template.dynamic template=main}}
+              {{> modules zone="contentBottom"}}
+            {{/if}}
+
           </div>
 
-          {{> yield}}
+          {{> modules zone="footer"}}
+
         </div>
 
-        {{> craterFooter}}
+        {{> tabs}}
+
       </div>
-
-      {{> craterTabs}}
-
+      {{{extraCode}}}
     </div>
-
-    {{{extraCode}}}
-  </div>
-
+  {{else}}
+    <div class="app-loading">{{> loading}}</div>
+  {{/if}}
 </template>
