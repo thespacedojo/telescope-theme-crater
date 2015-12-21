@@ -1,4 +1,4 @@
-<template name="crater_comment_item">
+<template name="craterCommentItem">
   <li class="comment module comment-displayed" id="{{_id}}">
     <div class="comment-body">
       {{#if isDeleted}}
@@ -27,7 +27,7 @@
                 <a href="/comments/{{_id}}" class="comment-meta-item comment-reply goto-comment">{{_ "reply"}}</a>
               {{/if}}
               {{#if canEdit this}}
-                <a class="comment-meta-item edit-link" href="{{pathFor route='comment_edit' _id=_id}}"><i class="icon ion-ios-compose-outline"></i> {{_ "edit"}}</a>
+                <a class="comment-meta-item edit-link" href="{{pathFor 'commentEdit' _id=_id}}"><i class="icon ion-ios-compose-outline"></i> {{_ "edit"}}</a>
               {{/if}}
             </div>
             <div class="comment-text markdown">{{{htmlBody}}}</div>

@@ -1,4 +1,4 @@
-<template name="crater_user_menu">
+<template name="craterUserMenu">
   {{#if isLoggedIn}}
     <div class="dropdown user-menu header-submodule">
       <button class="btn btn-default btn-lg dropdown-toggle" data-toggle="dropdown"><i class="icon ion-ios-person-outline"></i></button>
@@ -6,7 +6,7 @@
     </div>
   {{else}}
     <div class="dropdown user-menu header-submodule">
-      <a class="account-link sign-up btn btn-default btn-lg" href="{{pathFor route='atSignIn'}}">
+      <a class="account-link sign-up btn btn-default btn-lg" href="{{pathFor 'signIn'}}">
         <i class="icon ion-ios-person-outline"></i>
       </a>
     </div>

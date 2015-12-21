@@ -1,39 +1,25 @@
-<head>
-<link href='//fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-<link href='//fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-</head>
-
-<template name="crater_layout">
+<template name="craterLayout">
   {{#if appIsReady}}
     {{> css}}
     <div class="outer-wrapper {{currentPage}} {{navLayout}}">
       <div class="inner-wrapper template-{{pageName}}">
-
         <div class="crater-content-wrapper">
-
           {{> header}}
-        
-          {{> modules zone="hero"}}
-
-          <div class="content-wrapper">
-
-            {{#if notAllowed}}
-              {{> Template.dynamic template=notAllowed.template data=notAllowed.data}}
-            {{else}}
-              {{> Template.dynamic template=adminMenu}}
-              {{> modules zone="contentTop"}}
-              {{> Template.dynamic template=main}}
-              {{> modules zone="contentBottom"}}
-            {{/if}}
-
+          <div class="newsletter-wrapper">
+            {{> modules zone="hero"}}
           </div>
-
-          {{> modules zone="footer"}}
-
+          {{#if notAllowed}}
+            {{> Template.dynamic template=notAllowed.template data=notAllowed.data}}
+          {{else}}
+            {{> Template.dynamic template=adminMenu}}
+            {{> modules zone="contentTop"}}
+            {{> Template.dynamic template=main}}
+            {{> modules zone="contentBottom"}}
+          {{/if}}
+          {{> craterFooter}}
         </div>
-
-        {{> tabs}}
-
+         {{> craterTabs}}
+        <div class="overlay hidden"></div>
       </div>
       {{{extraCode}}}
     </div>
