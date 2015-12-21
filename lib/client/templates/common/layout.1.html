@@ -1,0 +1,33 @@
+<head>
+<link href='//fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+</head>
+
+<template name="clone_craterLayout">
+
+  <div class="outer-wrapper {{currentPage}}">
+    <div class="inner-wrapper template-{{pageName}}">
+
+      <div class="crater-content-wrapper">
+        {{> header}}
+
+        <div class="content-inner-wrapper">
+          {{> messages}}
+          <div class="newsletter-wrapper">
+            {{> modules "hero"}}
+          </div>
+
+          {{> yield}}
+        </div>
+
+        {{> craterFooter}}
+      </div>
+
+      {{> craterTabs}}
+
+    </div>
+
+    {{{extraCode}}}
+  </div>
+
+</template>
